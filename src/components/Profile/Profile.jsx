@@ -1,8 +1,10 @@
-export default function Profile ({ username, tag, location, image, stats }) {
+import css from "./Profile.module.css"
+
+export default function Profile({ username, tag, location, image, stats }) {
     return (
-        <div>
+        <div className={css.container}>
             <div>
-                <img
+                <img className={css.image}
                     src={image}
                     alt="User avatar"
                 />
@@ -11,7 +13,7 @@ export default function Profile ({ username, tag, location, image, stats }) {
                 <p>{location}</p>
             </div>
 
-            <ul>
+            <ul className={css.listContainer}>
                 <li>
                     <span>Followers</span>
                     <span>{stats.followers}</span>
