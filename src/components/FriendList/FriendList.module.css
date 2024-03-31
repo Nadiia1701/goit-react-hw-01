@@ -1,0 +1,11 @@
+.listContainer {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.listItem {
+   width: calc((100% - 4 * 24px) / 5);
+   border: 2px solid black;
+   border-radius: 10px;
+}

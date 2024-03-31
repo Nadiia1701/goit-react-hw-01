@@ -1,19 +1,21 @@
-export default function TransactionHistory ({ items }) {
+import css from "./TransactionHistory.module.css"
+
+export default function TransactionHistory({ items }) {
     return (
-        <table>
-            <thead>
+        <table className={css.table}>
+            <thead className={css.tableThread}>
                 <tr>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                    <th className={css.tableThreadText}>Type</th>
+                    <th className={css.tableThreadText}>Amount</th>
+                    <th className={css.tableThreadText}>Currency</th>
                 </tr>
             </thead>
 
-            <tbody>
-                {items.map((item) => {return <tr key={item.id}>
-                    <td>{item.type}</td>
-                    <td>{item.amount}</td>
-                    <td>{item.currency}</td>
+            <tbody className={css.tableBody}>
+                {items.map((item) => {return <tr className={css.bodyTd} key={item.id}>
+                    <td className={css.tableThreadVal}>{item.type}</td>
+                    <td className={css.tableThreadVal}>{item.amount}</td>
+                    <td className={css.tableThreadVal}>{item.currency}</td>
                 </tr>})}
             </tbody>
         </table>

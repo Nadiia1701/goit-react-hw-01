@@ -1,0 +1,22 @@
+.table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+.tableThread {
+    background-color: #2c2c2c;
+}
+
+.tableThreadText {
+    color: white;
+}
+
+.bodyTd:nth-child(even) {
+    background-color: #d3d3d3;
+}
+
+.tableThreadVal {
+    font-size: 18px;
+    font-weight: 500;
+}

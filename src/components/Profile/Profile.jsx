@@ -1,30 +1,30 @@
 import css from "./Profile.module.css"
 
-export default function Profile({ username, tag, location, image, stats }) {
+export default function Profile({ name, tag, location, image, stats }) {
     return (
         <div className={css.container}>
-            <div>
+            <div className={css.userContainer}>
                 <img className={css.image}
                     src={image}
                     alt="User avatar"
                 />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+                <p className={css.username}>{name}</p>
+                <p className={css.userTag}>@{tag}</p>
+                <p className={css.userLocation}>{location}</p>
             </div>
 
             <ul className={css.listContainer}>
-                <li>
-                    <span>Followers</span>
-                    <span>{stats.followers}</span>
+                <li className={css.listItem}>
+                    <span className={css.listItemText}>Followers</span>
+                    <span className={css.listItemStats}>{stats.followers}</span>
                 </li>
-                <li>
-                    <span>Views</span>
-                    <span>{stats.views}</span>
+                <li className={css.listItem}>
+                    <span className={css.listItemText}>Views</span>
+                    <span className={css.listItemStats}>{stats.views}</span>
                 </li>
-                <li>
-                    <span>Likes</span>
-                    <span>{stats.likes}</span>
+                <li className={css.listItem}>
+                    <span className={css.listItemText}>Likes</span>
+                    <span className={css.listItemStats}>{stats.likes}</span>
                 </li>
             </ul>
         </div>
